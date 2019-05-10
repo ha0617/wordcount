@@ -1,0 +1,57 @@
+<head>
+    <title>WORD COUNT</title>
+</head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col">
+            </div>
+            <div class="col-md-auto">
+                <div align='middle'>
+                    <br>
+                    <br>
+                    <h1 class="h1">WORD COUNT</h1>
+
+                    <a class="ABOUT" href="{%url 'about'%}">ABOUT</a>
+                        
+                    <form action="{%url 'result'%}">
+                        <textarea cols='61' rows='15' name='fulltext' style="background-color:#1d4428; color:white;"></textarea>
+                        <br>
+                        <br>
+                        <input type='submit' class="btn btn-outline-light" value='제출' style="font-size 30px;" >
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+    @import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script');
+    .h1{
+        font-family: 'Just Another Hand', cursive;
+        font-weight: bolder;
+        background-color: #7b5223;
+        color: white;
+    }
+    .ABOUT{
+        font-family: 'Just Another Hand', cursive;
+        color:white;
+        font-size:20px;
+    }
+    body{
+        background-color: #bc884b;
+        font-family: 'Nanum Pen Script', cursive;
+        font-size : 20px;
+    }
+</style>

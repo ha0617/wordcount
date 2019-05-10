@@ -1,0 +1,96 @@
+<head>
+    <title>WORD COUNT</title>
+</head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<body>
+    <div class="container">
+        <div align='center'>
+            <div class="col">
+            </div>
+
+            <div class="col-md-auto">
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-9">
+                        <h1> 입력한 텍스트는 총 <span class='color'>{{total}} 단어</span> 로 구성되어 있습니다.</h1>
+                    </div>
+                    <div class="col-4">
+                        <br>
+                        <h2 style='background-color:#e4af72;' class='bold'> 입력한 텍스트 </h2>
+                        <br>
+                    </div>
+                    <div class="col-6">
+                        <br>
+                        <h2 style='background-color:#e4af72;' class='bold'> 단어 카운트 </h2>
+                        <br>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-4 green">
+                            {{full}}
+                    </div>
+                    <div class="col-6 border2" style='color:white;'>
+                        {% for word,howmany in dictionary %}
+                        
+                        {{word}} : {{howmany}}
+                        <br>
+                        {%endfor%}
+                        <br>
+                    </div>
+                </div>                
+            </div>
+            <div class="col">
+            </div>
+
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <a href = "{%url 'home'%}" class="btn btn-outline-light">다시하기</a>
+                    <a href = "{%url 'update'%}" class="btn btn-outline-light">수정하기</a>
+                    <br>
+                </div>
+                <div class="col-sm">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+
+<style>
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script');
+    body{
+        background-color: #bc884b;
+        font-family: 'Nanum Pen Script', cursive;
+        font-size : 20px;
+    }
+    .col-9{
+        font-weight: bolder;
+        background-color: #7b5223;
+        color: white;
+    }
+    .green{
+        background-color:#1d4428;
+        color:white;
+    }
+    .bold{
+        font-weight: bolder;
+    }
+    .color{
+        background-color:#f2e880;
+        color:black;
+    }
+    .border2{border-width: thin medium;}
+</style>
